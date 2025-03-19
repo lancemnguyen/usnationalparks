@@ -1,1 +1,1 @@
-# US National Park Directory
+# US National Parks Directory
