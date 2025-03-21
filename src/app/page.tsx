@@ -23,7 +23,7 @@ export default function Home() {
             US National Parks
           </h1>
           <p className="text-xl text-gray-200">
-            Discover America's natural treasures
+            Discover America&apos;s natural treasures
           </p>
         </motion.div>
 
