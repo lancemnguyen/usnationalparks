@@ -102,10 +102,10 @@ const stateDisplayNames: { [key: string]: string } = {
 };
 
 interface ParkPageProps {
-  params: {
+  params: Promise<{
     state: string;
-    id: string;
-  };
+    id: string; // Include this if you need to use 'id' in this component
+  }>;
 }
 
 export async function generateMetadata({ params }: ParkPageProps) {
