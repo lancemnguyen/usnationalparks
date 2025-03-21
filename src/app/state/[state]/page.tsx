@@ -1,6 +1,5 @@
-import Background from '@/components/Background';
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+// import { notFound } from 'next/navigation';
 import { alaskaParks } from '@/data/alaska-parks';
 import { arizonaParks } from '@/data/arizona-parks';
 import { arkansasParks } from '@/data/arkansas-parks';
@@ -107,8 +106,12 @@ export default async function StatePage({ params }: { params: { state: string } 
   const parks = stateParksMap[state.toLowerCase()];
   const displayName = stateDisplayNames[state.toLowerCase()];
 
+  // if (!parks || !displayName) {
+  //   notFound();
+  // }
   if (!parks || !displayName) {
-    notFound();
+    // Handle the case where the park or display name is not found
+    return <div>Park Not Found</div>; // You can customize this as needed
   }
 
   return (

@@ -3,71 +3,76 @@ import { Park } from '@/types/park';
 export const alaskaParks: Park[] = [
   {
     id: 'denali',
-    name: 'Denali National Park and Preserve',
+    name: 'Denali National Park',
+    description: 'Home to North America\'s highest peak, Denali National Park offers stunning landscapes and diverse wildlife.',
     location: {
       state: 'Alaska',
-      coordinates: { latitude: 63.0695, longitude: -151.0074 },
+      coordinates: {
+        latitude: 63.0695,
+        longitude: -151.0074
+      }
     },
     established: '1917',
     size: '6,075,030 acres',
     highlights: [
-      'Home to North America\'s highest peak, Denali (20,310 feet)',
-      'Diverse wildlife including grizzly bears, wolves, and moose',
-      'Stunning landscapes with tundra, forests, and mountains',
+      'Denali Peak',
+      'Wildlife Viewing',
+      'Glacier Hiking',
+      'Scenic Drives',
+      'Backcountry Camping'
     ],
     activities: [
       'Hiking',
-      'Wildlife viewing',
-      'Camping',
+      'Wildlife Watching',
       'Photography',
-      'Backcountry exploration',
+      'Camping',
+      'Rafting'
     ],
-    bestTimeToVisit: 'Late spring to early fall (May to September)',
+    bestTimeToVisit: 'May to September',
     hikingTrails: [
       {
         name: 'Mount Healy Overlook Trail',
         difficulty: 'Moderate',
         length: '5 miles round trip',
         elevationGain: '1,000 feet',
-        description: 'A scenic trail leading to a stunning overlook of the park.',
+        description: 'A scenic trail leading to a stunning overlook of the park.'
       },
       {
         name: 'Savage River Loop Trail',
         difficulty: 'Easy',
-        length: '2 miles',
-        elevationGain: '100 feet',
-        description: 'A short loop trail with beautiful views of the Savage River.',
-      },
+        length: '2 mile loop',
+        elevationGain: '200 feet',
+        description: 'A family-friendly trail with beautiful views of the Savage River.'
+      }
     ],
     airports: [
       {
         name: 'Fairbanks International Airport',
         code: 'FAI',
         distance: '120 miles',
-        driveTime: '2.5 hours',
+        driveTime: '2.5 hours'
       },
       {
         name: 'Anchorage Ted Stevens International Airport',
         code: 'ANC',
         distance: '240 miles',
-        driveTime: '5 hours',
-      },
+        driveTime: '4 hours'
+      }
     ],
     nearbyCities: [
       {
         name: 'Talkeetna',
         state: 'Alaska',
         distance: '112 miles',
-        driveTime: '2.5 hours',
+        driveTime: '2.5 hours'
       },
       {
         name: 'Healy',
         state: 'Alaska',
-        distance: '12 miles',
-        driveTime: '15 minutes',
-      },
-    ],
-    description: 'Denali National Park and Preserve is a vast wilderness area in Alaska, known for its stunning landscapes, diverse wildlife, and the towering peak of Denali. Visitors can explore the park through various activities, including hiking, wildlife viewing, and camping.',
+        distance: '11 miles',
+        driveTime: '15 minutes'
+      }
+    ]
   },
   {
     id: 'kenai-fjords',
