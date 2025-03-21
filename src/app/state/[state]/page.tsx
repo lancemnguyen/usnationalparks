@@ -102,7 +102,7 @@ const stateDisplayNames: { [key: string]: string } = {
 };
 
 export default async function StatePage({ params }: { params: { state: string } }) {
-  const { state } = await params;
+  const { state } = params;
   const parks = stateParksMap[state.toLowerCase()];
   const displayName = stateDisplayNames[state.toLowerCase()];
 
@@ -136,7 +136,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { state: string } }): Promise<Metadata> {
-  const { state } = await params;
+  const { state } = params;
   const displayName = stateDisplayNames[state.toLowerCase()];
   
   if (!displayName) {
