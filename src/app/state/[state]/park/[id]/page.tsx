@@ -109,7 +109,7 @@ interface ParkPageProps {
 }
 
 export async function generateMetadata({ params }: ParkPageProps): Promise<Metadata> {
-  const { state, id } = params;
+  const { state, id } = await params;
   const parks = stateParksMap[state.toLowerCase()];
   const park = parks?.find(p => p.id === id);
   const displayName = stateDisplayNames[state.toLowerCase()];
@@ -128,7 +128,7 @@ export async function generateMetadata({ params }: ParkPageProps): Promise<Metad
 }
 
 export default async function ParkPage({ params }: ParkPageProps) {
-  const { state, id } = params;
+  const { state, id } = await params;
   const parks = stateParksMap[state.toLowerCase()];
   const park = parks?.find(p => p.id === id);
   const displayName = stateDisplayNames[state.toLowerCase()];

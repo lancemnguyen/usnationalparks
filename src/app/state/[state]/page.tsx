@@ -101,8 +101,15 @@ const stateDisplayNames: { [key: string]: string } = {
   wyoming: 'Wyoming',
 };
 
-export default async function StatePage({ params }: { params: { state: string } }) {
-  const { state } = params;
+interface StatePageProps {
+  params: {
+    state: string;
+    id: string;
+  };
+}
+
+export default async function StatePage({ params }: StatePageProps) {
+  const { state } = await params;
   const parks = stateParksMap[state.toLowerCase()];
   const displayName = stateDisplayNames[state.toLowerCase()];
 
@@ -136,7 +143,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { state: string } }): Promise<Metadata> {
-  const { state } = params;
+  const { state } = await params;
   const displayName = stateDisplayNames[state.toLowerCase()];
   
   if (!displayName) {
