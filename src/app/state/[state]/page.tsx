@@ -1,4 +1,4 @@
-// import { Metadata } from 'next';
+import { Metadata } from 'next';
 // import { notFound } from 'next/navigation';
 import { alaskaParks } from '@/data/alaska-parks';
 import { arizonaParks } from '@/data/arizona-parks';
@@ -104,7 +104,7 @@ const stateDisplayNames: { [key: string]: string } = {
 interface StatePageProps {
   params: Promise<{
     state: string;
-    id: string; // Include this if you need to use 'id' in this component
+    id: string;
   }>;
 }
 
@@ -142,7 +142,7 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: StatePageProps) {
+export async function generateMetadata({ params }: StatePageProps): Promise<Metadata> {
   const { state } = await params;
   const displayName = stateDisplayNames[state.toLowerCase()];
   

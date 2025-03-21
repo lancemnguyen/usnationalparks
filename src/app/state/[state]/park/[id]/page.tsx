@@ -1,4 +1,4 @@
-// import { Metadata } from 'next';
+import { Metadata } from 'next';
 // import { notFound } from 'next/navigation';
 import { alaskaParks } from '@/data/alaska-parks';
 import { arizonaParks } from '@/data/arizona-parks';
@@ -108,7 +108,7 @@ interface ParkPageProps {
   }>;
 }
 
-export async function generateMetadata({ params }: ParkPageProps) {
+export async function generateMetadata({ params }: ParkPageProps): Promise<Metadata> {
   const { state, id } = await params;
   const parks = stateParksMap[state.toLowerCase()];
   const park = parks?.find(p => p.id === id);
