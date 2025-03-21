@@ -142,7 +142,7 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { state: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: StatePageProps) {
   const { state } = await params;
   const displayName = stateDisplayNames[state.toLowerCase()];
   
