@@ -104,7 +104,7 @@ const stateDisplayNames: { [key: string]: string } = {
 interface ParkPageProps {
   params: Promise<{
     state: string;
-    id: string; // Include this if you need to use 'id' in this component
+    id: string;
   }>;
 }
 
@@ -138,7 +138,7 @@ export default async function ParkPage({ params }: ParkPageProps) {
   // }
   if (!park || !displayName) {
     // Handle the case where the park or display name is not found
-    return <div>Park Not Found</div>; // You can customize this as needed
+    return <div>Park Not Found</div>;
   }
 
   return <ParkPageContent park={park} state={state} displayName={displayName} />;

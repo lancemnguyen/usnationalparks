@@ -118,7 +118,7 @@ export default async function StatePage({ params }: StatePageProps) {
   // }
   if (!parks || !displayName) {
     // Handle the case where the park or display name is not found
-    return <div>Park Not Found</div>; // You can customize this as needed
+    return <div>Park Not Found</div>;
   }
 
   return (
